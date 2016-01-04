@@ -1,0 +1,17 @@
+<%= form_for @recipes do |r| %>
+  <%= r.label :name %>
+  <%= r.text_field :name %>
+  <br>
+  <%= r.label :description %>
+  <%= r.text_field :description %>
+  <br>
+  <%= r.label :instructions %>
+  <%= r.text_field :instructions %>
+  <br>
+  <%= r.label :image %>
+  <%= r.text_field :image %>
+  <br>
+  <%= r.label :category %>
+  <%= r.text_field :category %>
+  <%= r.submit 'Create this Recipe!' %>
+<% end %>

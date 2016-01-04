@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stu's New Cookbook</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+   Stu's New Cookbook
+  
+  <nav>
+    <ul>
+      <li> <%= link_to('Show All Dishes', recipes_path) %>
+      <li> <%= link_to('Starters') %> </li>
+      <li> <%= link_to('Mains') %> </li>
+      <li> <%= link_to('Desserts') %> </li>
+      <br>
+      <li> <%= link_to("New Recipe", new_recipe_path) %> </li>
+    </ul>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stu's New Cookbook</title>
+</head>
+<body>
+<h2> List of Recipes </h2>
+   
+   <% for recipe in @recipes %>
+   <p> <%= recipe.name %>
+    <%= link_to("Show", recipe_path(recipe)) %>
+    <%= link_to("Edit", edit_recipe_path(recipe)) %> 
+    <%= button_to('Delete', recipe_path(recipe), method: :delete, data: {confirm: 'Are you sure?'}) %> </p>
+   <% end %>
+   
+
+
+    
+       
+    
+</body>
+</html>

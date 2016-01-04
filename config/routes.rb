@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :recipes
+  resources :recipes, :categories
   root 'recipes#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

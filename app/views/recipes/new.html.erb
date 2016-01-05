@@ -11,7 +11,7 @@
   <%= r.label :image %>
   <%= r.text_field :image %>
   <br>
-  <%= r.label :category_id %>
-  <%= r.number_field :category_id %>
+  <%= label for="category_id" %> Category: </label>
+  <%= r.select :category_id, Category.all.collect { |c| [c.category, c.category_id] } %>
   <%= r.submit 'Create this Recipe!' %>
 <% end %>

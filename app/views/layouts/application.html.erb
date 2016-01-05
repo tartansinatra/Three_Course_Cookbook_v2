@@ -5,19 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../layouts/styles.css">
+  <link rel="stylesheet" href="../css/responsive.css"> 
 </head>
 <body>
    Stu's New Cookbook
   
   <nav>
     <ul>
-      <li> <%= link_to('Show Categories', category_path) %>
-      <li> <%= link_to('Show All Dishes', recipes_path) %>
-      <li> <%= link_to('Starters') %> </li>
-      <li> <%= link_to('Mains') %> </li>
-      <li> <%= link_to('Desserts') %> </li>
+      <li> <%= link_to('Show Categories', categories_path) %> </li>
+      <li> <%= link_to('Show All Dishes', recipes_path) %> </li>
       <br>
       <li> <%= link_to("New Recipe", new_recipe_path) %> </li>
+      <li> <%= link_to("New Category", new_category_path) %> </li>
     </ul>
   </nav>
 

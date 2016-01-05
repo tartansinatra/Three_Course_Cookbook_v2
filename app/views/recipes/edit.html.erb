@@ -11,6 +11,6 @@
   <%= r.label :image %>
   <%= r.text_field :image %>
   <br>
-  <%= r.select :category_id, Category.all.collect { |c| [c.category, c.category_id] } %>
+  <%= r.select :category_id, Category.all.map { |c| [c.category, c.id] } %>
   <%= r.submit 'Edit!' %>
 <% end %>
